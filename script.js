@@ -2,13 +2,13 @@ function playerChoice() {
 let start = prompt("Type rock, paper or scissors to play!");
 let answer = start.trim().toLowerCase();
 if (answer === "rock") {
-    return "rock";
+    console.log("rock");
 }
 else if (answer === "paper") {
-    return"paper";
+    console.log("paper");
 }
 else{ (answer === "scissors")
-    return"scissors";
+    console.log("scissors");
 }
 }
 
@@ -41,19 +41,13 @@ else if ((answer === "rock" && computer ==="scissors") ||
   return "We have a winner!";
 
 }
+else if (answer == computer) {
+    return"It is a tie!"
+}
 else{
-    return "It is a Tie!";
+    return "Please select rock, paper, or scissors.";
 }
 }
 console.log(playRound(playerChoice(), computerPlay2()));
-
-function Game() {
-for(let i = 0; i < 5; i++) {
-    console.log(playRound(playerChoice(), computerPlay2()));
-
-}
-}
-
-
 
 
