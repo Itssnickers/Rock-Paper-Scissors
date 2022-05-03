@@ -3,31 +3,37 @@ let start = prompt("Type rock, paper or scissors to play!");
 let answer = start.trim().toLowerCase();
 if (answer === "rock") {
     console.log("rock");
+    return"rock"
 }
 else if (answer === "paper") {
     console.log("paper");
+    return"paper";
 }
 else{ (answer === "scissors")
     console.log("scissors");
+    return"scissors";
 }
 }
 
 
 function computerPlay2() {
-let computerPlay = Math.floor(Math.random() * 3 + 1);
+const computerPlay = Math.floor(Math.random() * 3) + 1;
 let computer = computerPlay;
  if (computer === 1) {
-     return "rock";
+     console.log("rock");
+     return"rock";
  }
  else if (computer === 2) {
-     return "paper";
+     console.log("paper");
+     return"paper";
  }
  else { (computer === 3) 
-     return "scissors";
+     console.log("scissors");
+     return"scissors";
  };
 }
 
-function playRound(computer, answer) {
+function playRound(answer,computer) {
 if (
     (answer === "rock" && computer === "paper") || 
 (answer === "paper" && computer === "scissors") || 
@@ -38,16 +44,14 @@ if (
 else if ((answer === "rock" && computer ==="scissors") ||
 (answer === "scissors" && computer === "paper") ||
 (answer === "paper" && computer === "rock")) {
-  return "We have a winner!";
+  console.log("We have a winner!");
 
 }
-else if (answer == computer) {
-    return"It is a tie!"
+else if (answer === computer) {
+    console.log("It is a tie!");
 }
 else{
     return "Please select rock, paper, or scissors.";
 }
 }
-console.log(playRound(playerChoice(), computerPlay2()));
-
-
+(playRound(playerChoice(),computerPlay2()));
